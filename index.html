@@ -1,1 +1,1187 @@
-시작
+
+<!--
+	개발자 : 이석
+	since : 2009 ~ 현재까지 업그레이드 계속 진행 중...
+-->
+
+<!doctype html>
+<html>
+<head>
+    <title>LINK모음</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+		{font-family: 맑은 고딕;}
+		a{text-decoration: none;}
+
+		.pc a{font-size:14px;}
+		.mobile a{font-size:32pt;}
+
+
+
+
+        .btn{
+            color:#044fa5;
+            padding:10px;
+            margin:0;
+            display:inline-block;
+            width: 220px;
+            border-bottom:0;
+        }
+        .btn{
+            color:#044fa5;
+            font-weight: bold;
+            background-color: #dbecff;
+            border:solid 1px #99c9ff;
+			border-top:0;
+        }
+        .btn:active{
+            border-bottom:solid 1px gray;
+        }
+        .btn.noLink{
+            color: #999999;
+        }
+        .btn.head_title{
+            color: #fff;
+            background-color: #1381ff;
+            border-bottom:none;
+            border-left:solid 1px #99c9ff;
+            border-right:solid 1px #99c9ff;
+            text-align : center;
+            font-size : 18px;
+            font-weight : bold;
+            margin:0;
+        }
+        .btn.head_title:active{
+            border-bottom:none;
+        }
+
+        .part{
+            margin-bottom : 20px;
+            margin-right : 20px;
+            float : left;
+        }
+        .controller{
+            margin-bottom : 20px;
+            font-weight: bold;
+        }
+
+        .controller div {
+            background-color: #cccccc;
+            padding:20px;
+        }
+
+
+
+
+        #tabMenu, #linkUrl { display: table;}
+
+        .tab > div {
+            float : left;
+        }
+
+        .tab {
+            float : none;
+        }
+
+        .tab .btn{
+            color:#fff;
+            padding:10px;
+            margin:0;
+            display:inline-block;
+            width: 100px;
+            max-width: 250px;
+            border:solid 1px #aaa;
+            font-weight: normal;
+            background-color: #777;
+            text-align: center;
+        }
+
+        .tab .btn.on{
+            color:#333;
+            font-weight: bold;
+            background-color: #eee;
+        }
+
+
+
+
+        .mobile .btn{
+            padding:20pt;
+            width: 710pt;
+        }
+        .mobile .btn{
+            border:solid 2pt #99c9ff;
+			border-top:0;
+        }
+        .mobile .btn:active{
+            border-bottom: solid 2pt #99c9ff;
+        }
+        .mobile .btn.head_title{
+            border-left: solid 2pt #99c9ff;
+            border-right: solid 2pt #99c9ff;
+			font-size : 32pt;
+        }
+
+        .mobile .part{
+            margin-bottom : 40pt;
+            margin-right : 20pt;
+        }
+        .mobile .controller{
+            margin-bottom : 20pt;
+        }
+
+        .mobile .controller div {
+            padding:20pt;
+        }
+
+
+
+
+        .mobile .tab .btn{
+            font-size:32pt;
+            padding:20pt;
+            width: 210pt;
+            max-width: 400pt;
+			height: 40pt;
+            border: solid 2pt #aaa;
+        }
+
+	
+
+
+        .green .btn{
+            color:#005249;
+            background-color: #e8faea;
+            border:solid 1px #90c5bf;
+			border-top:0;
+        }
+        .green .btn.head_title{
+			color: #fff;
+            background-color: #009f8e;
+            border-bottom:none;
+            border-left:solid 1px #90c5bf;
+            border-right:solid 1px #90c5bf;
+        }
+
+        .green .tab .btn{
+            color:#fff;
+            padding:10px;
+            margin:0;
+            display:inline-block;
+            width: 100px;
+            max-width: 250px;
+            border:solid 1px #aaa;
+            font-weight: normal;
+            background-color: #777;
+            text-align: center;
+        }
+
+        .green .tab .btn.on{
+            color:#333;
+            font-weight: bold;
+            background-color: #eee;
+        }
+
+
+
+
+        .mobile.green .btn{
+            padding:20pt;
+            width: 710pt;
+        }
+        .mobile.green .btn{
+            border:solid 2pt #90c5bf;
+			border-top:0;
+        }
+        .mobile.green .btn:active{
+            border-bottom: solid 2pt #90c5bf;
+        }
+        .mobile.green .btn.head_title{
+            border-left: solid 2pt #90c5bf;
+            border-right: solid 2pt #90c5bf;
+			font-size : 32pt;
+        }
+
+        .mobile.green .part{
+            margin-bottom : 40pt;
+            margin-right : 20pt;
+        }
+        .mobile.green .controller{
+            margin-bottom : 20pt;
+        }
+
+        .mobile.green .controller div {
+            padding:20pt;
+        }
+
+
+
+
+        .mobile.green .tab .btn{
+            font-size:32pt;
+            padding:20pt;
+            width: 210pt;
+            max-width: 400pt;
+			height: 40pt;
+            border: solid 2pt #aaa;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<!--
+<div class="controller">
+	<div class="display">
+		<input type="radio" name="display" value="block" onclick="displayAll();" checked="checked"/>block
+		<input type="radio" name="display" value="none" onclick="displayAll();" />none
+	</div>
+
+</div>
+
+<div class="part">
+	<div class="title"><a class="btn head_title" href="#">head_title 한글1</a></div>
+	<div class="content">
+		<div><a class="btn blue" target="_blank" href="#" >blue</a></div>
+		<div><a class="btn blue" target="_blank" href="#" >blue</a></div>
+		<div><a class="btn blue" target="_blank" href="#" >blue</a></div>
+		<div><a class="btn blue" target="_blank" href="#" >blue</a></div>
+		<div><a class="btn blue" target="_blank" href="#" >blue</a></div>
+	</div>
+</div> 
+-->
+
+<!--
+아래 id="urlData"로 인해 생성된 상단 Tab의 변경될 이름을 지정한다.
+-->
+<div id="tabName" style="display: none;">
+검색
+개발참고
+S/W(무료)
+S/W(유료)
+몽타
+여행
+ETC
+</div>
+
+<!--
+URL을 입력한다.
+각 URL BOX간 구분은 ENTER 2번으로 구분한다.
+Tab으로 나누고자하면  ENTER 4번으로 구분한다.
+-->
+<div id="urlData" style="display: none;">
+검색
+Google	https://www.google.com/
+네이버	http://www.naver.com
+youtube	https://www.youtube.com/
+Yahoo Japan	https://www.yahoo.co.jp/
+Stack Overflow	https://stackoverflow.com/
+Zenn<br>(일본 개발자 정보 공유 플랫폼)	https://zenn.dev/
+
+
+번역기
+Google 번역	https://translate.google.co.kr/?hl=ko
+네이버 번역기 (Papago)	https://papago.naver.com/
+
+
+지도
+네이버 지도(몽타)	https://map.naver.com/v5/directions/14125714.428244825,4507213.1366923135,%EB%AA%BD%ED%83%80,1954893520,PLACE_POI/14140573.175764728,4508561.067259351,%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C,12112355,PLACE_POI/-/transit?c=12,0,0,0,dh&isCorrectAnswer=true
+네이버 지도(LG전자서비스센터)	https://map.naver.com/v5/search/lg%EC%A0%84%EC%9E%90%EC%84%9C%EB%B9%84%EC%8A%A4%EC%84%BC%ED%84%B0?c=12,0,0,0,dh&isCorrectAnswer=true
+Google 지도(몽타)	https://www.google.co.kr/maps/place/%EB%AA%BD%ED%83%80/data=!3m1!4b1!4m6!3m5!1s0x357ca12f48da5cdf:0xa2beb1c274f89917!8m2!3d37.4867127!4d126.893054!16s%2Fg%2F11rsr_rccm?hl=ko
+
+
+wiki
+나무위키	https://namu.wiki/
+
+
+캘린더
+네이버 캘린더	https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%BA%98%EB%A6%B0%EB%8D%94
+Google 캘린더	https://calendar.google.com/calendar/u/0/r?tab=rc&pli=1
+
+
+날씨
+기상청 날씨	https://www.weather.go.kr/w/index.do
+네이버 날씨	https://weather.naver.com/
+
+
+사전
+네이버 사전	https://dict.naver.com/
+
+
+Youtube 추출
+yout	https://yout.com/video/?url=https://www.youtube.com/watch?v=Z02So9d7wk4
+ontiva	https://ontiva.com/en/watch?v=J4XuBqZ42GI
+
+
+경력관리
+SW경력관리시스템	https://career.sw.or.kr/personal/
+
+
+인터넷서점
+교보문고	http://www.kyobobook.co.kr/
+영풍문고	http://www.ypbooks.co.kr/
+리디북스	https://ridibooks.com/
+오디언	https://www.audien.com/
+위키독스	https://wikidocs.net/
+
+
+도서관
+노량진도서관	https://djlib.sen.go.kr/djlib/intro/search/index.do
+구로도서관	https://grlib.sen.go.kr/
+대방어린이도서관	https://lib.dongjak.go.kr/dj/html.do?menu_idx=79
+여의샛강도서관	https://www.ydplib.or.kr/yulib/index.do
+서울시 전자도서관	https://e-lib.sen.go.kr/
+서울특별시 전자도서관	https://www.bookers.life/front/home/categoryList.do
+
+
+신문
+전자신문	https://www.etnews.com/
+전자신문 PDF	https://pdf.etnews.com/
+
+
+쇼핑
+아마존	https://www.amazon.com/
+알리익스프레스	https://best.aliexpress.com/
+Qoo10	https://www.qoo10.com/
+G-Market	https://www.gmarket.co.kr/
+
+
+
+
+PC
+다나와	https://www.danawa.com/pc/
+CPU 벤치	https://www.cpubenchmark.net/high_end_cpus.html
+퀘이사존	https://quasarzone.com/
+하드웨어배틀	http://www.hwbattle.com/
+2CPU	https://www.2cpu.co.kr/
+기글하드웨어	https://gigglehd.com/
+플레이워즈	http://playwares.com/
+쿨엔조이	https://coolenjoy.net/
+JN테크리뷰	https://cafe.naver.com/jntechreview
+NoteBookCheck	https://www.notebookcheck.net/NVIDIA-GeForce-RTX-3050-Laptop-GPU-Benchmarks-and-Specs.513790.0.html
+
+
+메인보드
+ASUS	https://www.asus.com/
+MSI	https://kr.msi.com/
+GIGABYTE	https://www.gigabyte.com/
+ASRock	https://www.asrock.com/
+
+
+Mini PC
+MinisForum	https://www.minisforum.com/
+Beelink	https://www.bee-link.com/
+CHATREEY	https://www.goodtico.net/
+Khadas Mind	https://mind.khadas.com/
+
+
+벤치마크
+공랭쿨러(싱글)	https://quasarzone.com/bbs/qf_cool/views/315648
+공랭쿨러(듀얼)	https://quasarzone.com/bbs/qc_qsz/views/1317104
+시스템쿨러 2021년	https://quasarzone.com/bbs/qc_bench/views/74139
+써멀-퀘이사존 2021년	https://quasarzone.com/bbs/qn_hardware/views/1175850
+써멀-쿨엔조디 2019년	https://coolenjoy.net/bbs/39/11685?p=3
+
+
+Ali 케이스
+Yujiang P05	https://ko.aliexpress.com/item/1005004999723334.html?spm=a2g0o.detail.1000013.9.4cd078ceJegOrM&gps-id=pcDetailBottomMoreThisSeller&scm=1007.13339.291025.0&scm_id=1007.13339.291025.0&scm-url=1007.13339.291025.0&pvid=59b0d2a3-a54e-4a66-a3eb-627316c4f706&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.291025.0,pvid:59b0d2a3-a54e-4a66-a3eb-627316c4f706,tpp_buckets:668%232846%238108%231977&pdp_ext_f=%7B%22sku_id%22%3A%2212000031299660638%22%2C%22sceneId%22%3A%223339%22%7D&pdp_npi=2%40dis%21KRW%2153006.0%2150355.0%21%21%21%21%21%402101d1ac16712927468101461ee795%2112000031299660638%21rec
+SGPC K59(M-ATX)	https://ko.aliexpress.com/item/1005004495465097.html?spm=a2g0o.store_pc_allProduct.8148356.1.314a2817sXvRep&pdp_npi=2%40dis%21KRW%21%E2%82%A9%2039%2C314%21%E2%82%A9%2031%2C828%21%21%21%21%21%402103399116715437875162193e7fc5%2112000029360003317%21sh
+METALFISH S5	https://ko.aliexpress.com/item/10000221324472.html?spm=a2g0o.productlist.main.21.60e53001z4RfNA&algo_pvid=f7e4f089-fecd-49f9-b59b-112295223024&algo_exp_id=f7e4f089-fecd-49f9-b59b-112295223024-10&pdp_ext_f=%7B%22sku_id%22%3A%2212000031273666338%22%7D&pdp_npi=2%40dis%21KRW%2132041.0%2132041.0%21%21%21%21%21%40211be3d216719348286552840d0781%2112000031273666338%21sea&curPageLogUid=bUEqbhfjRqV6
+K88 MATX 케이스	https://ko.aliexpress.com/item/1005004767581476.html?spm=a2g0o.store_pc_groupList.8148356.29.3860279dCZaCXw&pdp_npi=2%40dis%21KRW%21%E2%82%A9%2086%2C681%21%E2%82%A9%2086%2C681%21%21%21%21%21%402101d91e16719390897855405e7bda%2112000030400118319%21sh
+
+
+컨퍼런스
+comthai	https://comthai.atlassian.net/wiki/welcome?src=signup
+공식 Jira사용방법	https://www.atlassian.com/ko/software/jira/guides/getting-started/overview
+Jira사용하기	https://hanminwoo.com/60
+Jira협업	https://medium.com/dtevangelist/devops-jira%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%98%91%EC%97%85-1%EB%B6%80-63c71489f21d
+
+
+Redis
+Redis운영주의사항	https://www.oss.kr/storage/app/public/festival/track2/2-1.pdf
+
+
+단축키
+IntelliJ 단축키	https://twofootdog.tistory.com/84
+eclipse 단축키 1	https://coding-factory.tistory.com/833
+eclipse 단축키 2	https://phantom.tistory.com/16
+VSCode 단축키	https://engineer-mole.tistory.com/204
+
+
+Spring Boot
+Spring Boot | 이클립스 설치	https://kitty-geno.tistory.com/120
+Spring Boot 시작하기	https://tiboy.tistory.com/667?category=896014
+
+
+Git 호스팅
+GitHub	https://github.com/
+GitLab	https://about.gitlab.com/
+BitButcket	https://bitbucket.org/
+
+
+WSL2
+WSL2설치	https://www.lainyzine.com/ko/article/how-to-install-wsl2-and-use-linux-on-windows-10/
+WSL2+도커설치	https://velog.io/@hanjuli94/%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90%EC%84%9C-%EB%8F%84%EC%BB%A4-%EC%8B%A4%EC%8A%B5%ED%95%98%EA%B8%B0
+WSL2+도커설치2	https://axce.tistory.com/121
+
+
+도커(공식 매뉴얼)
+홈페이지	https://docs.docker.com/get-started/overview/
+도커 데스크탑	https://docs.docker.com/desktop/
+
+
+도커 추가정보
+도커 image 검색/다운로드	https://www.leafcats.com/190
+도커 Hub	https://hub.docker.com/
+오라클12c 이미지 설치	https://darksharavim.tistory.com/650
+오라클12c 이미지 설치	https://stricky.tistory.com/395
+오라클12c 접속	https://stricky.tistory.com/396
+MariaDB 설치1	https://wecandev.tistory.com/63
+MariaDB 설치2	https://dkswnkk.tistory.com/697
+
+
+크롬
+크롬 렌즈	chrome://flags/#enable-lens-region-search
+번역기 옵션	https://mainia.tistory.com/3570
+이미지 다중 다운로드	https://chrome.google.com/webstore/detail/image-downloader-save-pho/lbohagbplppjcpllnhdichjldhfgkicb?hl=ko
+
+
+안드로이드
+안드로이드 단축키(공식)	https://developer.android.com/studio/intro/keyboard-shortcuts?hl=ko
+안드로이드 단축키	https://nittaku.tistory.com/60
+안드로이드 강의	https://www.youtube.com/playlist?list=PLYlZbv3fX7WvaWMB9zRgbO7Hzf3MRgrIf
+스튜디오 문제 해결	https://developer.android.com/studio/troubleshoot?hl=ko
+물리 스마트폰 연결용 - 윈도우용 USB 드라이버 설치 일반	https://developer.android.com/studio/run/oem-usb?hl=ko
+물리 스마트폰 연결용 - 윈도우용 USB 드라이버 설치 - LG 스마트폰용	https://kbench.com/software/?q=node/76137
+Android App Bundle 정보	https://developer.android.com/guide/app-bundle?hl=ko
+깡샘 블로그	https://kkangsnote.tistory.com/
+깡샘의 안드로이드 자료실	https://drive.google.com/drive/u/0/folders/1VWh7YasVjUImPTO4anvYCbjEq3NL9X4q
+
+
+JAVA
+리플렉션 API : 클래스, 필드, 메서드 정보 조회	https://sas-study.tistory.com/275
+OpenJDK 11 API	https://devdocs.io/openjdk~11/
+
+
+Kotlin
+kotlinlang	https://play.kotlinlang.org/
+
+
+LINUX
+CentoOS	https://www.centos.org/download/
+저용량 LINUX	https://blog.daum.net/sualchi/13720856
+LINUX 동영상강의	https://www.youtube.com/watch?v=pSuHUNghIeM&list=PLVsNizTWUw7FJot9rAiWBJN3V9EZFBFZX
+이것이우분투리눅스다. Q&A	https://cafe.naver.com/thisisLinux
+우분투 22.04 원격 데스크탑	https://ko.linux-console.net/?p=14892
+
+
+javascript
+js 여러정보	https://lunamiss.synology.me/study/
+
+
+TypeScript
+타입스크랩트 공식 사이트	https://www.typescriptlang.org/
+
+
+디자인패턴
+디자인패턴 1	https://m.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS8616098823
+디자인패턴 2	https://victorydntmd.tistory.com/299?category=719467
+
+
+ETC
+온라인 포토샵	https://www.photopea.com/
+Youtube음악다운로드	https://ytmp3.cc/ene65e7cqp/
+intelliJ	https://oooh.co.kr/entry/JetBrains
+freepik	https://kr.freepik.com/
+변수명 짓기	https://www.curioustore.com/#!/util/naming
+
+
+Window11 - WSL2
+WSL2설치	https://www.lainyzine.com/ko/article/how-to-install-wsl2-and-use-linux-on-windows-10/
+
+
+Elastic
+Elastic 가이드북	https://esbook.kimjmin.net/
+
+
+Splunk
+공식홈페이지	https://www.splunk.com/ko_kr
+공식홈페이지 다운로드	https://www.splunk.com/en_us/download.html
+공식 한글문서	https://docs.splunk.com/Documentation/Splunk/9.0.4/Translated/Koreanmanuals
+공식 파트너 페이지	https://partners.splunk.com/
+다운로드▶기초/실습 문서	https://www.splunk.com/en_us/download/splunk-enterprise/thank-you-enterprise.html
+다운로드▶도서예제	 http://www.acornpub.co.kr/book/splunk-siem
+
+
+SQLite
+SQLite3	https://wikidocs.net/12452
+
+
+위키독스
+SQLite3	https://wikidocs.net/12452
+점프 투 스프링부트	https://wikidocs.net/book/7601
+
+
+PPT 작성
+PPT 색상표	https://www.google.com/search?q=PPT+%EC%83%89%EC%83%81%ED%91%9C&oq=PPT+%EC%83%89%EC%83%81%ED%91%9C&aqs=chrome..69i57j0i512.4028j0j4&sourceid=chrome&ie=UTF-8
+무료 아이콘	https://www.google.com/search?q=%EB%AC%B4%EB%A3%8C+%EC%95%84%EC%9D%B4%EC%BD%98&sxsrf=APwXEdczf1TJX4Ie9xRHheQNQNylAcAHdg%3A1686717955984&ei=A0aJZJLVO9aQ-AbngIT4Dw&ved=0ahUKEwjS4uiE-sH_AhVWCN4KHWcAAf8Q4dUDCA8&uact=5&oq=%EB%AC%B4%EB%A3%8C+%EC%95%84%EC%9D%B4%EC%BD%98&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCCMQigUQJzIHCAAQigUQQzIKCAAQgAQQFBCHAjIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6CwgAEIAEELEDEIMBOhEILhCABBCxAxCDARDHARDRAzoQCAAQgAQQFBCHAhCxAxCDAToICAAQgAQQsQNKBAhBGABQAFilEGDZEWgDcAF4AoABiAGIAdEKkgEEMS4xMZgBAKABAcABAQ&sclient=gws-wiz-serp
+
+
+React
+React 공식홈페이지	https://ko.legacy.reactjs.org/
+위키독스 React	https://wikidocs.net/book/10082
+VS Code + React	https://velog.io/@sua_ahn/React-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%EC%8B%A4%ED%96%89-Node.js-VS-Code
+
+
+JAVA 정적 코드 분석
+참고1	https://dzone.com/articles/java-code-quality-tools-recommended-by-developers
+참고2	https://velog.io/@been/IT%EA%B8%B0%EC%82%AC%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EA%B6%8C%EC%9E%A5%ED%95%98%EB%8A%94-Java-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EB%8F%84%EA%B5%AC
+참고3	https://walking-and-walking.com/entry/%EC%9E%90%EB%B0%94%EC%99%80-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EB%B6%84%EC%84%9D-%EB%8D%94-%EB%82%98%EC%9D%80-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9D%84-%ED%96%A5%ED%95%98%EC%97%AC
+참고4	https://soccerda.tistory.com/261
+
+
+데이터
+공공데이터	https://www.data.go.kr
+
+
+FLUTTER
+FLUTTER 공식문서	https://docs.flutter.dev/
+Dart & Flutter 공식패키지 저장소	https://pub.dev/
+DartPad	https://dartpad.dev/
+FLUTTER로 만든 적응형 앱	https://codelabs.developers.google.com/codelabs/flutter-adaptive-app
+Dart 기초 무료도서	https://brunch.co.kr/brunchbook/dartforflutter
+
+
+
+
+휴이온
+Inspiroy Dial 2	https://www.huion.com/kr/pen_tablet/InspiroyDial/inspiroy-dial-2.html
+
+
+추천 S/W 모음 사이트
+softpick	https://www.softpick.co.kr/
+
+
+H/W 성능 모니터링
+CPU-Z	https://cpu-z.softonic.kr/
+HWMonitor PRO	https://www.cpuid.com/softwares/hwmonitor-pro.html
+
+
+IDE
+Eclipse	https://www.eclipse.org/downloads/
+Spring Tools(Eclipse)	https://spring.io/tools
+
+
+에디터
+OneNote	https://www.onenote.com/download?omkt=ko-kr
+Notepad++	https://notepad-plus-plus.org/downloads/
+VSCode	https://code.visualstudio.com/
+ANDROID STUDIO	https://developer.android.com/studio/install?hl=ko
+
+
+문서
+Foxit PDF Reader	https://www.foxit.com/pdf-reader/
+PDF ▶ WORD 변환	https://www.foxit.com/pdf-to-word/
+
+
+이미지
+반디소프트 - 꿀뷰	https://kr.bandisoft.com/honeyview/
+무료 기업 이미지뷰어	https://www.pintosoft.com/ko/foni
+피픽 - 캡쳐	https://picpick.softonic.kr/
+
+
+화면 녹화
+OBS	https://obsproject.com/ko
+
+
+동영상 플레이어
+팟플레이어	https://tv.kakao.com/guide/potplayer
+
+
+파일관리
+Total Commander	https://www.ghisler.com/
+Q-Dir	https://q-dir.softonic.kr/
+
+
+RestAPI Test
+PostMan	https://www.postman.com/
+
+
+DB
+DBeaver - DB 접속툴	https://dbeaver.io/
+마리아DB	https://mariadb.com/kb/ko/mariadb/
+MySQL	https://dev.mysql.com/downloads/installer/
+
+
+MariaDB
+MySQL/MariaDB 세션 확인 / Session kill	https://soo02.tistory.com/113
+
+
+SSH 접속툴
+MobaXterm	https://mobaxterm.mobatek.net/
+
+
+브라우저
+크롬	https://www.google.co.kr/chrome/?brand=IBEF&gclid=Cj0KCQjwpPKiBhDvARIsACn-gzA_XwCZ_1ICdVvrmzDtrcPaUuoaSOAc4EwQi58f-Np8qBMbm5jRR9UaAjWHEALw_wcB&gclsrc=aw.ds
+파이어폭스	https://www.mozilla.org/ko/firefox/new/
+MS엣지	https://www.microsoft.com/ko-kr/edge?form=MA13FJ
+오페라	https://www.opera.com/ko
+
+
+LINUX
+우분투	https://ubuntu.com/download/desktop
+우분투 USB설치	https://amkorousagi-money.tistory.com/entry/%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%B6%80%ED%8C%85-usb-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98
+
+
+VMWARE
+VirtualBox	https://www.virtualbox.org/
+버철박스 Win11  화면사이즈 변경	https://www.wikigain.com/fix-screen-size-of-windows-11-in-virtualbox/
+VMware에 설치된 오라클에 접속하기	https://all-record.tistory.com/26
+
+
+WINDOW
+MS Doc	https://docs.microsoft.com/ko-kr/
+MS PowerToys	https://learn.microsoft.com/ko-kr/windows/powertoys/install
+MS Sandbox	https://www.soft2000.com/14753
+MS PC Manager	https://pcmanager.microsoft.com/ko-kr
+WOL(Wake On Lan) 설정 1	https://www.asus.com/kr/support/faq/1049115/
+WOL(Wake On Lan) 설정 2	https://sjblog1.tistory.com/52
+WOL로 PC켜기	https://m.blog.naver.com/mulmandu-camp/222382017727
+전원 : 강제 최고 성능모드 설정	https://ccf1007overmen.tistory.com/1544
+
+
+APPLE 계열
+아이튠즈	https://www.apple.com/kr/itunes/
+
+
+ETC
+WinMerge	https://winmerge.org/downloads/?lang=ko
+카카오톡	https://www.kakaocorp.com/page/service/service/KakaoTalk
+Fan Controller	https://getfancontrol.com/
+
+
+드라이버
+로지텍	https://www.logitech.com/ko-kr
+휴이온	https://www.huion.com/kr/download/
+HP	https://support.hp.com/kr-ko/drivers
+EPSON	https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/sl/s
+후지제록스	https://support-fb.fujifilm.com/setupSupport.do?cid=6&ctry_code=KR&lang_code=ko
+
+
+
+
+IDE
+IntelliJ	https://www.jetbrains.com/ko-kr/idea/download/
+
+
+DB
+Oracle	https://www.oracle.com/kr/
+Oracle DBMS 다운로드	https://www.oracle.com/kr/database/technologies/oracle-database-software-downloads.html
+
+
+WINDOWS
+WIN11 공식 다운로드	https://www.microsoft.com/ko-kr/software-download/windows11	
+WIN11 설치시 오프라인 계정 설정	https://www.tabmode.com/windows-11/install-windows-11-22h2-with-local-account/#install-windows-11-with-local-account2
+
+
+VMWARE
+VMWARE PRO<br/>(2024.05.14부터 개인 무료)	https://www.vmware.com/kr/products/workstation-pro.html
+ORACLE 외부접속 설정	https://luckeex.tistory.com/356
+
+
+GAME
+STEAM	https://store.steampowered.com/?l=koreana
+블리자드	https://www.blizzard.com/ko-kr/	
+
+
+
+
+몽타
+몽타 홈페이지	http://www.mongta.co.kr/
+사내 NAS(인트라넷)	http://172.30.1.25:5000/
+사내 GitLab (hosts설정필요)	http://gitlab_mongta.co.kr
+사내 GitLab-Git매뉴얼	http://gitlab_mongta.co.kr/joins_gitlab/joins_gitlab/-/wikis/1.2-GitLab-소개
+사내 SCM Manager(XenServer)	http://172.30.1.53:8080/scm/
+사내 XWiKi	http://xwiki.mongta.co.kr:8080/
+
+
+몽타 사내 장비 드라이버
+사내 신도리코 D450 복합기<br>* IP에 172.30.1.200 입력하시고 설치 진행<br>* 포트 설정 영역에서 네트워크 항목에 IP 주소를 위 아이피로 입력	https://www.sindoh.com/ko/customer/total-search-result.php?key_word=D450
+
+
+몽타 온라인 협업툴
+위하고(그룹웨어, 메일, 근태관리)	https://www.wehago.com/
+Flow(게시판, 프로젝트관리)	https://mongta.flow.team/main.act
+
+
+몽타 Job 관련
+잡코리아	https://www.jobkorea.co.kr/
+사람인	https://www.saramin.co.kr/zf_user/
+인쿠르트	https://www.incruit.com/
+워크넷	https://www.work.go.kr/seekWantedMain.do
+삼성DS 상생협력포탈	https://partner.samsungsemi.com:7777/partner/
+망고보드	https://www.mangoboard.net/
+원티드	https://www.wanted.co.kr/
+이랜서	https://www.elancer.co.kr
+프로그래머스	https://programmers.co.kr/
+위시켓	https://www.wishket.com
+인프런	https://www.inflearn.com/
+로켓펀치	https://www.rocketpunch.com
+
+
+협력업체(인스웨이브)
+홈페이지	http://www.inswave.com
+웹스퀘어	http://www.websquare.co.kr
+기술지원	https://wtech.inswave.kr
+0.웹스퀘어 교육신청(회원가입)	https://wtech.inswave.kr/websquare/websquare.html?w2xPath=/cm/xml/index.xml&inPath=/ui/edu/eduList.xml
+1.WebSquare Reference Example(WRE)	https://example.websquare.kr/websquare/websquare.html?w2xPath=/mainContainer.xml
+2.WebSquare Youtube	https://www.youtube.com/c/WebsquareCoKr/videos
+3.웹스퀘어 API 가이드	https://docs.inswave.com/websquare/websquare.html?w2xPath=/support/api/ws5_sp5/api.xml
+4.웹스퀘어 기술자료(회원가입)	https://wtech.inswave.kr/websquare/websquare.html?w2xPath=/cm/xml/index.xml
+5.교육 동영상	https://wtech.inswave.kr/websquare/websquare.html?w2xPath=/cm/xml/index.xml&inPath=/ui/edu/eduVideo.xml
+5.교육-1.개발자 과정	https://www.youtube.com/playlist?list=PL7a9HhkvOVb09T_2Xdxs4sPgyDjkGlT9G
+5.교육-2.고급 개발자 과정	https://www.youtube.com/playlist?list=PL7a9HhkvOVb0JAbcD8JrThjwssqAQSNAh
+5.교육-3.공통 개발자 교육	https://www.youtube.com/playlist?list=PL7a9HhkvOVb2tqh6WQEqfEzvs52eNOGxa
+5.교육-4.SP5 퍼블리싱 실습과정	https://www.youtube.com/playlist?list=PL7a9HhkvOVb3RwaphJUnuqkrJ8UKcy-kJ
+
+
+협력업체(STEG)
+홈페이지	http://www.steg.co.kr/
+서비스데스크	http://www.steg.co.kr/servicedesk/
+네이버 카페	https://cafe.naver.com/stegrnd
+ITIL 관련 참고문서	https://wikidocs.net/83051
+ISO 20000 공식문서	https://www.iso.org/obp/ui/#iso:std:iso-iec:20000:-1:ed-3:v1:en
+DEV	https://dev.egene.io/
+
+
+협력업체(세포아)
+세포아소프트 홈페이지	https://www.sepoasoft.co.kr/
+교육자료	https://haka-sepoa-techdev.notion.site/Sepoa-UX-one-f3f44e3db730448fa96d664e550d1146
+파일 1 (Dev)	http://twice.sepoa.co.kr/sharing/rkWLpQG6e
+파일 2 (Task)	http://twice.sepoa.co.kr/sharing/cOGFUYrtC
+로컬개발환경	http://localhost:19480/
+
+
+사업
+스마트공공화장실	https://drive.google.com/drive/folders/1r0RBV_Jodbw4A8q3wz4jXFKnI7-Vz16r
+
+
+삼성증권
+삼성증권 IT외주인력관리시스템<br/>(투입시)	https://itos.samsungpop.com/login.do?type=2
+한국금융IT Chark	https://www.kfits.co.kr/html/ko/sub/solution/mastery.php?id=hts
+
+
+IOAdmin 개발환경 관련
+IOAdmin 사내 개발서버 로그인	http://3.14.232.31/login
+사내 jenkins	http://jenkins.mongta.co.kr/
+Git 설치파일	https://git-scm.com/
+사내 GitLab	<br/>(Hosts파일 수정필요)	http://www.gitlab_mongta.co.kr
+IntelliJ IDEA Community Edition	https://www.jetbrains.com/ko-kr
+Julu openJDK11	https://www.azul.com/downloads/?os=windows&package=jdk#zulu
+Oracle DBMS 다운로드	https://www.oracle.com/kr/database/technologies/oracle-database-software-downloads.html
+
+
+iShark
+YouTube 데모영상	https://www.youtube.com/@user-om1fv6lx6t/videos
+iShark 리눅스환경 설치 및 실행	https://www.evernote.com/shard/s312/client/snv?noteGuid=440e0271-3a8c-8294-8eda-9fefcd03af7b&noteKey=9a4fbc50a4b0183220cca65b2248c1f9&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs312%2Fsh%2F440e0271-3a8c-8294-8eda-9fefcd03af7b%2F9a4fbc50a4b0183220cca65b2248c1f9&title=iShark%2B%25EB%25A6%25AC%25EB%2588%2585%25EC%258A%25A4%25ED%2599%2598%25EA%25B2%25BD%2B%25EC%2584%25A4%25EC%25B9%2598%2B%25EB%25B0%258F%2B%25EC%258B%25A4%25ED%2596%2589
+
+
+EClipse
+EClipse RCP<br/>(SWT, JFACE 등)	https://wiki.eclipse.org/Rich_Client_Platform
+ECLIPLSE 버전별 최소 요구 JDK 버전	https://soif0180.tistory.com/entry/Eclipse-%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4-%EB%B2%84%EC%A0%84%EB%B3%84-%EC%A0%95%EB%B3%B4-%EB%B0%8F-JDK-%EC%B5%9C%EC%86%8C-%EC%9A%94%EA%B5%AC-%EB%B2%84%EC%A0%84
+Eclipse RCP - Tutorial	https://www.vogella.com/tutorials/EclipseRCP/article.html#introduction-to-eclipse-rcp-applications
+SWT JFace Eclipse	http://www.java2s.com/Code/Java/SWT-JFace-Eclipse/CatalogSWT-JFace-Eclipse.htm#google_vignette
+Hello SWT	https://javaslave.tistory.com/67
+SWT/JFace	https://javaslave.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/SWT%20%26%20JFace#google_vignette
+Eclipse 4 RCP 정리	https://narup.tistory.com/133
+SWT 예제	https://m.blog.naver.com/PostSearchList.naver?blogId=gglee0127&orderType=sim&searchText=SWT
+
+
+LOCAL
+splunk	http://127.0.0.1:8000/ko-KR/app/launcher/home
+엘라스틱	https://localhost:9200/
+키바나	http://localhost:5601
+
+
+
+
+국내여행사 2020년 순위
+1. 하나투어	https://www.hanatour.com/
+2. 모두투어	https://www.modetour.com/
+3. 인터파크투어	https://sky.interpark.com/
+4. 노랑풍선	https://www.ybtour.co.kr/
+5. 타이드스퀘어	https://tidesquare.com/
+6. 온라인투어	https://www.onlinetour.co.kr/
+7. 레드캡투어	https://www.redcap.co.kr/
+8. 호텔신라	https://www.hotelshilla.net/
+9. 롯데제이티비	https://m.lottejtb.com/
+10. 참좋은여행	https://www.verygoodtour.com/
+11. 클럽로뎀 (URL모르겠음)
+12. 롯데관광개발	http://www.lottetour.com/
+13. 현대드림투어	http://home.hyundaidreamtour.com/
+14. 케이알티	https://www9.krt.co.kr/
+15. 세중여행	http://www.happytour.co.kr/
+16. 웹투어	https://www.webtour.com/
+17. 자유투어	https://jautour.com/
+18. 탑항공	http://www.toptravel.co.kr/
+19. 내일투어	http://www.naeiltour.co.kr/
+20. 한진관광	https://mall.kaltour.com/
+
+
+여행
+태사랑	https://thailove.net/
+아고다	https://www.agoda.com/ko-kr/
+태국교민잡지	http://kyominthai.com/
+
+
+태국내 음식점
+맥도날드	https://www.mcdonalds.co.th/
+더 피자컴퍼니	https://1112.com/
+
+
+태국내 대형마트
+Big C	https://www.bigc.co.th/
+
+
+태국식당(방콕)
+(중식)후아센홍	https://huasenghong.co.th/
+(디저트)수수-빙수	https://www.facebook.com/SusuBing.Cafe/
+
+
+태국식당(꼬창)
+(태국 다이닝) 카오콴 레스토랑	https://www.facebook.com/khaokwankohchang
+
+
+World 라디오
+마이튜너-라디오	https://mytuner-radio.com/search/?q=thailand
+
+
+
+
+요리
+중식실기	https://blog.naver.com/dior1968
+
+
+MIKU
+아쿠스틱기타	https://www.youtube.com/results?search_query=%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AFAcoustic+Version
+
+
+치킨
+60계치킨	https://www.60chicken.com/
+BBQ치킨	https://www.bbq.co.kr/
+BHC치킨	https://www.bhc.co.kr/
+KFC	https://www.kfckorea.com/
+교촌치킨	http://www.kyochon.com/
+굽네치킨	https://www.goobne.co.kr/
+네네치킨	https://nenechicken.com/
+노랑통닭	http://www.norangtongdak.co.kr/
+누나홀닭	https://www.nuguna-banhandak.co.kr/
+동키치킨	https://www.dkchicken.co.kr/
+둘둘치킨	https://www.22chicken.co.kr/
+땅땅치킨	https://www.codd.co.kr/
+또래오래	http://10966.mbym.co.kr/
+또봉이통닭	http://ttobongee.com/
+림스치킨	https://www.limschicken.co.kr/
+맥시칸치킨	http://www.mexican.co.kr/2020/inner.php?sMenu=main
+멕시카나	https://mexicana.co.kr/
+멕시칸치킨	http://www.mexican.co.kr/
+보드람치킨	http://www.bodram.com/
+부어치킨	http://www.boor.co.kr/
+자담치킨	http://www.ejadam.co.kr/
+지코바치킨	http://www.gcova.co.kr/
+처가집	https://www.cheogajip.co.kr/
+페리카나	https://www.pelicana.co.kr/
+푸라닭	https://www.puradakchicken.com/main/
+호식이두마리치킨	http://www.9922.co.kr/
+호치킨	https://hochicken.co.kr/
+
+
+햄버거
+맥도날드	https://www.mcdonalds.co.kr/
+버거킹	https://www.burgerking.co.kr/
+맘스터치	https://momstouch.co.kr/
+롯데리아	https://www.lotteeatz.com/brand/ria
+
+
+피자
+피자스쿨	http://www.pizzaschool.co/
+오구쌀피자	http://xn--2e0b622b4gcxwb8x8a.kr/
+도미노피자	https://web.dominos.co.kr/
+피자헛	https://www.pizzahut.co.kr/
+피자알보로	https://www.pizzaalvolo.co.kr/
+미스터피자	https://www.mrpizza.co.kr/
+피자에땅	https://www.pizzaetang.com/
+파파존스	https://pji.co.kr/
+
+
+배달
+요기요	https://www.yogiyo.co.kr/
+
+
+FF5
+몬스터	https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=orcan&logNo=80202027782
+직업	https://namu.wiki/w/%ED%8C%8C%EC%9D%B4%EB%84%90%20%ED%8C%90%ED%83%80%EC%A7%80%205/%EC%A7%81%EC%97%85
+
+
+구직
+사람인	https://www.saramin.co.kr/
+잡코리아	https://www.jobkorea.co.kr/
+JobPlanet	https://www.jobplanet.co.kr/job
+
+
+프리랜서 커뮤니티
+OK JSP	https://okky.kr/
+IT노조	http://www.itunion.or.kr/xe/
+
+
+ETC
+CodeSandbox	https://codesandbox.io/
+
+
+위키독스
+숏텀 리눅스	https://wikidocs.net/book/11567
+우분투 리눅스, 록키 리눅스 운영 기초	https://wikidocs.net/book/9241
+우분투(Ubuntu)와 WSL	https://wikidocs.net/book/10238#google_vignette
+WSL2: Windows, Ubuntu, Docker, TensorFlow2 등	https://wikidocs.net/book/10445
+Bash 쉘스크립트 개발 시작하기	https://wikidocs.net/book/2370
+오픈소스소프트웨어 실습	https://wikidocs.net/book/13835
+깃(git) & 깃허브(GitHub)	https://wikidocs.net/book/14452
+PostgreSQL을 여행하는 입문자를 위한 안내서	https://wikidocs.net/book/8814	
+코딩 초보를 위한 엑셀코딩, VBA	https://wikidocs.net/book/2807
+VBA로 EXCEL을 우아하게 사용하기	https://wikidocs.net/book/8441
+사장님 몰래 하는 파이썬 업무자동화	https://wikidocs.net/book/6353
+파이썬을 활용한 업무 자동화 	https://wikidocs.net/177133
+Must Have 코드팩토리의 플러터 프로그래밍(2판)	https://wikidocs.net/book/14188
+실무에 바로 쓰는 AWS	https://wikidocs.net/book/9562
+SQLite3로 가볍게 배우는 데이터베이스: SQL 기초 실습	https://wikidocs.net/book/1530
+</div>
+
+
+
+<div id="tabMenu" class="pc small blue">
+    <div class="part">
+        <div id="tabCount" class="" style="display: none;"></div>
+        <div id="tab" class="tab">
+            <!--
+            <div><a class="btn on" href="#" >LINK</a></div>
+            <div><a class="btn" href="#" >LINK2</a></div>
+            -->
+        </div>
+    </div>
+</div>
+
+
+
+<div id="linkUrl" class="pc small blue">
+</div>
+
+
+
+
+
+
+
+</body>
+
+<script>
+    // 구분선
+    let divisionLine = "\n\n\n\n\n";
+
+    let displayAll = function() {
+        let checkedValue = document.querySelector('input[name="display"]:checked').value;
+
+        if(checkedValue == "block"){
+
+        } else {
+
+        }
+    }
+
+    // URL DATA 읽어오기
+    let readUrlData = function() {
+        let readUrlData = document.querySelector( "#urlData").innerHTML;
+        if( readUrlData != null)
+            readUrlData = readUrlData.trim();
+
+        // console.log( readUrlData);
+
+        return readUrlData;
+    }
+
+    // 구분선 기준으로 URL DATA를 쪼갠다.
+    let dividArrayData = function( urlText) {
+        let arrUrlData = urlText.split( divisionLine);
+
+        return arrUrlData;
+    }
+
+    // 읽어온 URL DATA를 Object형태의 값을 가진 배열형태로 변경
+    let changeArrayUrlData = function( urlData) {
+        let arrUrlData = urlData.split( "\n\n\n");
+
+        let arrLinkData = new Array( arrUrlData.length);
+
+        for( let key in arrUrlData) {
+
+            let arrUrlDataLine = arrUrlData[ key].split( "\n");
+            let arrLineLinkData = new Array( arrUrlDataLine.length);
+
+            for( let lineKey in arrUrlDataLine) {
+                let lineLinkData = arrUrlDataLine[ lineKey].split( "\t");
+                let linkDataObj = { title : "", url : ""};
+
+                linkDataObj.title = lineLinkData[0];
+                linkDataObj.url = lineLinkData[1];
+
+                if( linkDataObj.url == null) linkDataObj.url = "";
+
+                arrLineLinkData[ lineKey] = linkDataObj;
+            }
+
+            arrLinkData[ key] = arrLineLinkData;
+        }
+
+//	console.log( arrLinkData);
+        return arrLinkData;
+    }
+
+    // URL DATA를 Object형태의 값을 가진 배열을 이용해 html 생성
+    let createUrlDataHtml = function( arrLinkData) {
+        let createHtml = "";
+
+        for( var key in arrLinkData) {
+            createHtml = createHtml.concat('\n<div class="part">');
+
+            for( var lineKey in arrLinkData[key]) {
+//			console.log( arrLinkData[key][lineKey]);
+                if( lineKey == 0){
+                    if( arrLinkData[key][lineKey].url == null || arrLinkData[key][lineKey].url.length <= 0)
+                        arrLinkData[key][lineKey].url = '#';
+
+                    createHtml = createHtml.concat('\n	<div class="title"><a class="btn head_title" target="_blank" href="', arrLinkData[key][lineKey].url ,'">', arrLinkData[key][lineKey].title ,'</a></div>');
+                    createHtml = createHtml.concat('\n	<div class="content">');
+                }else{
+
+                    let noLinkClass="";
+
+                    if( arrLinkData[key][lineKey].url == null || arrLinkData[key][lineKey].url.length <= 0) {
+                        arrLinkData[key][lineKey].url = '#';
+                        noLinkClass = " noLink";
+                    }
+
+                    createHtml = createHtml.concat('\n	<div><a class="btn blue', noLinkClass,'" target="_blank" href="', arrLinkData[key][lineKey].url ,'" >', arrLinkData[key][lineKey].title ,'</a></div>');
+
+                }
+
+            }
+
+            createHtml = createHtml.concat('\n	</div>');
+            createHtml = createHtml.concat('\n</div>');
+            createHtml = createHtml.concat('\n\n\n\n');
+        }
+
+//	console.log( createHtml);
+
+        return createHtml;
+    }
+
+    // tab명칭 변경
+    let changeTabName = function() {
+        let readTabName = document.querySelector( "#tabName").innerHTML;
+
+        if( readTabName != null)
+            readTabName = readTabName.trim();
+
+        let arrTabName = readTabName.split( "\n");
+
+        let tabCount = document.getElementById('tabCount').getAttribute('class');
+
+        if( tabCount != null && tabCount.length > 0) {
+            for( let i=0; i< tabCount; i++) {
+                if( arrTabName.length > i )
+                    document.getElementById('tab' + i).innerHTML = arrTabName[i];
+            }
+        }
+
+    }
+
+    // tab onClick
+    let tabClick = function( tabId) {
+        let tabCount = document.getElementById('tabCount').getAttribute('class');
+
+        for( let i=0; i< tabCount; i++) {
+            document.getElementById('tab' + i).classList.remove( 'on');
+            document.getElementById( 'tabArea' + i).style.removeProperty("display");
+            document.getElementById( 'tabArea' + i).style.cssText = "display:none;";
+        }
+
+        document.getElementById( 'tab' + tabId).classList.add('on');
+        document.getElementById( 'tabArea' + tabId).style.cssText = "";
+    }
+	
+	// 모바일여부 체크 function
+	let isMobile = function() {
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	}
+
+	// 모바일인 경우, 클래스명을 .pc를 .mobile로 변경
+	let changeClassPc = function() {
+		if( isMobile()) {
+
+			document.getElementById("tabMenu").classList.replace( "pc", "mobile");
+			document.getElementById("linkUrl").classList.replace( "pc", "mobile");
+			
+		} else {
+		}
+	}
+
+    // 실행용 function
+    let run = function() {
+        let urlData = readUrlData();
+
+        let tabUrlData = dividArrayData( urlData);
+        let createHtml = "";
+        let createTabHtml = "";
+
+        for( var tab in tabUrlData) {
+            let tabNo = "tab" + tab;
+            let tabArea = "tabArea" + tab;
+            let arrLinkData = changeArrayUrlData( tabUrlData[tab]);
+            let display="";
+            let on = "on";
+
+            if( tab != 0){
+                display = 'display:none;';
+                on = "";
+            }
+
+            createHtml = createHtml.concat( '<div id="', tabArea,'" style="', display,'">', createUrlDataHtml( arrLinkData), '</div>');
+            createTabHtml = createTabHtml.concat('<div><a id="', tabNo,'" class="btn ', on,'" href="#" onclick="tabClick( ', tab,');">', tabNo,'</a></div>');
+
+        }
+
+        // Link HTML 생성
+        document.getElementById('linkUrl').innerHTML = createHtml;
+        document.getElementById('tab').innerHTML = createTabHtml;
+        document.getElementById('tabCount').classList.add( tabUrlData.length);
+
+        // Tab이름 변경
+        changeTabName();
+		
+		// 모바일인 경우, 클래스명을 .pc를 .mobile로 변경
+		changeClassPc();
+    }
+
+
+
+
+
+    // 실행
+    run();
+
+
+</script>
+
+</html>
+
